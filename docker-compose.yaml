@@ -1,6 +1,18 @@
 version: '3'
 
 services:
+  nginx:
+    build:
+      context: nginx
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+    networks:
+      - mynetwork
+
   app:
     build:
       context: node

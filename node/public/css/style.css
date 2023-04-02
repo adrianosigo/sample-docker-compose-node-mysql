@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(162, 184, 238);
+}
+
+/* # para id*/
+#formulario-pergunta{
+    margin-top: 5vh;
+}
+
+/* . para class */
+.formulario-pergunta{
+    margin-top: 50px;
+}

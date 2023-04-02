@@ -1,0 +1,32 @@
+<%-include('partials/header.ejs') %>
+
+    <body>
+        <%-include('partials/navbar.ejs') %>
+            <div class="container">
+                <hr>
+                <h1>Lista de Perguntas</h1>
+                
+                <a href="/perguntar" class="btn btn-primary">Fazer uma Pergunta</a>
+                <hr>
+                <% if (typeof perguntas !== 'undefined') { %> 
+                    <% perguntas.forEach(function(perg){ %> 
+                        <br>
+                        <div class="card">
+                            <div class="card-body">
+                                <h3><a data-bs-toggle="collapse" aria-controls="collapseExample" href="#collapse<%= perg.id; %>"><%= perg.titulo; %></a></h3>
+                                <div class="collapse" id="collapse<%= perg.id; %>">
+                                    <div class="card card-body">
+                                        <%= perg.descricao; %>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="/pergunta/<%= perg.id; %>"><button class="btn btn-primary">Responder</button></a>
+                            </div>
+                        </div>                    
+                    <% }) %> 
+                <% } %> 
+            </div>
+
+    </body>
+<%-include('partials/footer.ejs') %>

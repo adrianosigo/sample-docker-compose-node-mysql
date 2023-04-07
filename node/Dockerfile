@@ -4,6 +4,12 @@ FROM node:19-alpine3.16
 # Definir o diretório de trabalho
 WORKDIR /usr/src/app
 
+#COPIAR o arquivo index.js para o diretório de trabalho WORKDIR
+COPY . .
+
+# Instalar dependências
+RUN npm install
+
 # Instala o dockerize - https://github.com/jwilder/dockerize
 # Dockerize é uma ferramenta que permite que você espere por um serviço TCP ou um sinal de um processo antes de continuar.
 ENV DOCKERIZE_VERSION v0.6.1

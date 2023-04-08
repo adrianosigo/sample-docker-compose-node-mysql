@@ -28,7 +28,8 @@ services:
       - db
 
   db:
-    image: mysql:5.7
+    build:
+      context: db
     command: --innodb-use-native-aio=0
     container_name: db
     restart: always

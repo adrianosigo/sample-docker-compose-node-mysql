@@ -1,5 +1,6 @@
 # README
 
+
 ## Introdução
 
 Este repositório contém os arquivos necessários para a execução de um aplicativo Node.js com um banco de dados MySQL e um servidor web NGINX usando o Docker Compose. O aplicativo consiste em uma plataforma simples para perguntas e respostas.

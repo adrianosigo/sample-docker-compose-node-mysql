@@ -32,11 +32,10 @@ services:
     command: --innodb-use-native-aio=0
     container_name: db
     restart: always
-    tty: true
     environment:
       - MYSQL_ROOT_PASSWORD=123456
-      - MYSQL_DATABASE=nodedb
-      - MYSQL_USER=dbuser
+      - MYSQL_DATABASE=db_node
+      - MYSQL_USER=db_user
       - MYSQL_PASSWORD=123456
     networks:
       - mynetwork

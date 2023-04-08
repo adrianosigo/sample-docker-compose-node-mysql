@@ -23,7 +23,6 @@ services:
       node index.js
     networks:
       - mynetwork
-    tty: true
     depends_on:
       - db
 
